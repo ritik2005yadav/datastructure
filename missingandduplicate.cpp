@@ -1,21 +1,31 @@
-#include<iostream>
-#include<vector>
-#include<set>
+#include <bits/stdc++.h>
 using namespace std;
-int main(){
-set<int>s;
-int sum=0;
-
-    int a[5]={3,2,1,5,3};
-    for(int i=0;i<5;i++){
-        s.insert(a[i]);
-      
+ 
+void printTwoElements(int arr[], int n){\
+  // sorting the array
+  sort(arr,arr+n);
+  cout << "The repeating element is ";
+  for(int i=0;i<n-1;i++){
+      if(arr[i]==arr[i+1]){
+        cout<<arr[i]<<endl;
+          break;
     }
-     for(int i=0;i<s.size();i++){
-        sum+=s[i];
-
-     }
-
-    
-
+  }
+   
+  cout << "and the missing element is ";
+  for(int i=1;i<=n;i++){
+      if(i!=arr[i-1]){
+        cout<<i<<endl;
+          break;
+    }
+  }
+   
+}
+ 
+int main() {
+ 
+    int arr[] = { 7, 3, 4, 5, 5, 6, 2 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printTwoElements(arr, n);
+    return 0;
 }
