@@ -1,3 +1,11 @@
+// in this question our approach is simple
+//time complexity =Olog(mn)
+//we imagine that our array in linear form one row after one row
+//in case of searching for row=mid/col
+//col=mid%col
+
+
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -30,6 +38,7 @@ int col;
 cin>>row;
 cin>>col;
 int target;
+cin>>target;
 vector<vector<int>>matrix(row,vector<int>(col,0));
 for(int i=0;i<row;i++){
     for(int j=0;j<col;j++){
